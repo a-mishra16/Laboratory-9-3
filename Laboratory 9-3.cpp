@@ -27,7 +27,6 @@ int main()
 	}
 
 	displayRun(rolls, length);
-
 }
 
 void displayRun(int values[], int size)
@@ -49,5 +48,19 @@ void displayRun(int values[], int size)
 		cout << " ";
 
 	}
+}
+
+bool hasRun(int values[], int size)
+{
+	bool run = false;
+	for (int i = 0; i < size; i++)
+	{
+		if (values[i] == values[i + 1])
+		{
+			run = true;
+			break;
+		}
+	}
+	return run;
 }
 
