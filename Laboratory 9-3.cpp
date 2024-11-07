@@ -25,8 +25,13 @@ int main()
 		roll = rand() % 6 + 1;
 		rolls[i] = roll;
 	}
-
 	displayRun(rolls, length);
+
+	while (hasRun(rolls, length) == false)
+	{
+		displayRun(rolls, length);
+	}
+	
 }
 
 void displayRun(int values[], int size)
